@@ -13,6 +13,11 @@ export default {
     buttonText: String,
     filename: String,
   },
+  methods: {
+    getImageUrl(filename) {
+      return new URL(`../assets/${filename}`, import.meta.url).href
+    },
+  },
 }
 </script>
 
@@ -47,7 +52,7 @@ export default {
       <div
         class="flex basis-2/5 border-solid border-2 justify-center self-center order-1 md:order-2 mb-2"
       >
-        <img src="../assets/lamp.png" class="w-max p-4" />
+        <img :src="getImageUrl(filename)" class="w-max p-4" />
       </div>
     </div>
   </div>

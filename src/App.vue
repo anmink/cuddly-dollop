@@ -13,7 +13,7 @@ export default {
   <SectionCard
     input
     button
-    filename="lamp"
+    filename="lamp.png"
     buttonText="Join community"
     headline="Our mission"
     paragraph="Tired of feeling uninspired by your wardrobe? Let us help you discover the hidden gems in your closet with the Outfit Recommendations App!"
