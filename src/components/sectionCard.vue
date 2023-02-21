@@ -1,10 +1,8 @@
 <script>
-import lamp from '../assets/lamp.png'
+import useValidate from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
 
 export default {
-  components: {
-    lamp,
-  },
   props: {
     input: Boolean,
     button: Boolean,
@@ -13,10 +11,35 @@ export default {
     buttonText: String,
     filename: String,
   },
+  data() {
+    return {
+      v$: useValidate(),
+      email: '',
+      errorMsg: false,
+      successMsg: false,
+    }
+  },
   methods: {
     getImageUrl(filename) {
       return new URL(`../assets/${filename}`, import.meta.url).href
     },
+    submit() {
+      this.v$.$validate() // checks all inputs
+      if (!this.v$.$error) {
+        // if ANY fail validation
+        this.successMsg = true
+        this.errorMsg = false
+        this.email = ''
+      } else {
+        this.errorMsg = true
+        this.successMsg = false
+      }
+    },
+  },
+  validations() {
+    return {
+      email: { required, email },
+    }
   },
 }
 </script>
@@ -40,14 +63,18 @@ export default {
             type="email"
             placeholder="E-Mailadresse hinterlassen"
             required
+            v-model="email"
           />
           <button
             v-if="button"
+            @click="submit"
             class="order-2 px-6 py-3 rounded-2xl bg-primary text-white text-base font-mulish"
           >
             {{ buttonText }}
           </button>
         </div>
+        <p v-if="errorMsg">Error</p>
+        <p v-if="successMsg">Success</p>
       </div>
       <div
         class="flex basis-2/5 border-solid border-2 justify-center self-center order-1 md:order-2 mb-2"
