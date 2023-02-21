@@ -68,13 +68,21 @@ export default {
           <button
             v-if="button"
             @click="submit"
-            class="order-2 px-6 py-3 rounded-2xl bg-primary text-white text-base font-mulish"
+            class="order-2 px-6 py-3 rounded-2xl bg-primary text-white text-base font-mulish hover:bg-accent"
           >
             {{ buttonText }}
           </button>
         </div>
-        <p v-if="errorMsg">Error</p>
-        <p v-if="successMsg">Success</p>
+        <p class="text-sm font-mulish text-rose-600 font-bold" v-if="errorMsg">
+          Sieht aus als würde deine Mailadresse nicht ganz richtig aussehen 😬
+        </p>
+        <p
+          class="text-sm font-mulish text-lime-600 font-bold"
+          v-if="successMsg"
+        >
+          Hey! Du hast dich erfolgreich bei uns ins Freundebuch eingetragen!
+          Schon bald schreiben wir dir 🥳
+        </p>
       </div>
       <div
         class="flex basis-2/5 border-solid border-2 justify-center self-center order-1 md:order-2 mb-2"

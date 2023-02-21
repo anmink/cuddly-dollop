@@ -17,7 +17,7 @@ module.exports = {
 
           secondary: '#146c58',
 
-          accent: '#D59B6A',
+          accent: '#AA3E34',
 
           neutral: '#333333',
 
@@ -30,6 +30,8 @@ module.exports = {
           warning: '#E97F14',
 
           error: '#DF1A2F',
+
+          hover: '#AA3E34',
         },
       },
     ],
