@@ -46,17 +46,21 @@ export default {
 
 <template>
   <div
-    class="p-4 mx-4 md:p-10 md:mx-8 lg:mx-20 lg:p-20 xl:mx-40 xl:p-20 border-2"
+    class="p-4 mx-4 mb-8 md:p-10 md:mx-8 lg:mx-20 lg:p-20 xl:mx-40 xl:p-20 border-2"
   >
     <div class="flex flex-col md:flex-row">
       <div
-        class="basis-3/5 order-2 md:order-1 md:self-center md:mr-4 border-solid border-2"
+        class="basis-2/4 order-2 md:order-1 md:self-center md:mr-4 border-solid border-2"
       >
         <h2 class="font-newsreader text-3xl mb-2">{{ headline }}</h2>
         <p class="font-mulish text-base mb-4">
           {{ paragraph }}
         </p>
-        <div class="flex flex-col xl:flex-row xl:w-full xl:space-x-4">
+        <form
+          method="POST"
+          data-netlify="true"
+          class="flex flex-col xl:flex-row xl:w-full xl:space-x-4"
+        >
           <input
             v-if="input"
             class="order-1 border border-solid rounded-2xl py-3 px-3 mb-2 text-gray-900 text-base font-mulish xl:w-3/5 xl:mb-0"
@@ -72,7 +76,7 @@ export default {
           >
             {{ buttonText }}
           </button>
-        </div>
+        </form>
         <p class="text-sm font-mulish text-rose-600 font-bold" v-if="errorMsg">
           Sieht aus als würde deine Mailadresse nicht ganz richtig aussehen 😬
         </p>
@@ -85,7 +89,7 @@ export default {
         </p>
       </div>
       <div
-        class="flex basis-2/5 border-solid border-2 justify-center self-center order-1 md:order-2 mb-2"
+        class="flex basis-2/4 border-solid border-2 justify-center self-center order-1 md:order-2 mb-2"
       >
         <img :src="getImageUrl(filename)" class="w-max p-4" />
       </div>

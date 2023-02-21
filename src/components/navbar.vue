@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-4 z-50 mx-16 mb-4">
+  <div class="sticky top-4 z-50 mx-16 mb-8">
     <div class="navbar border border-solid rounded-2xl backgroundBlur">
       <div class="navbar-start">
         <div class="dropdown">
