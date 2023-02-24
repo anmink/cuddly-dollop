@@ -57,9 +57,10 @@ export default {
           {{ paragraph }}
         </p>
         <form
+          class="flex flex-col xl:flex-row xl:w-full xl:space-x-4"
+          name="contact"
           method="POST"
           data-netlify="true"
-          class="flex flex-col xl:flex-row xl:w-full xl:space-x-4"
         >
           <input
             v-if="input"
@@ -70,6 +71,7 @@ export default {
             v-model="email"
           />
           <button
+            type="submit"
             v-if="button"
             @click="submit"
             class="order-2 px-6 py-3 rounded-2xl bg-primary text-white text-base font-mulish hover:bg-accent"
