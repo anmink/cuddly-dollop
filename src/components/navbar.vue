@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-4 z-50 mx-16 mb-8">
+  <div class="sticky top-4 z-50 mx-4 mb-8 md:mx-8">
     <div class="navbar border border-solid rounded-2xl backgroundBlur">
       <div class="navbar-start">
         <div class="dropdown">
@@ -23,21 +23,26 @@
             tabindex="0"
             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li><a class="font-mulish">How it works</a></li>
-            <li><a class="font-mulish">Our mission</a></li>
-            <li><a class="font-mulish">Who we are</a></li>
+            <li><a class="font-mulish text-base m-2">How it works</a></li>
+            <li><a class="font-mulish text-base m-2">Our mission</a></li>
+            <li><a class="font-mulish text-base m-2">Who we are</a></li>
+            <li>
+              <a class="font-mulish text-base m-2 md:hidden"
+                >Join the community</a
+              >
+            </li>
           </ul>
         </div>
         <a class="btn btn-ghost normal-case text-xl">wearnize</a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a class="font-mulish">How it works</a></li>
-          <li><a class="font-mulish">Our mission</a></li>
-          <li><a class="font-mulish">Who we are</a></li>
+          <li><a class="font-mulish text-base m-2">How it works</a></li>
+          <li><a class="font-mulish text-base m-2">Our mission</a></li>
+          <li><a class="font-mulish text-base m-2">Who we are</a></li>
         </ul>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end hidden md:flex">
         <button
           class="px-6 py-3 rounded-2xl bg-primary text-white text-base font-mulish hover:bg-accent"
         >
