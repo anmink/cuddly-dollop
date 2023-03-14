@@ -21,33 +21,52 @@
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52"
           >
-            <li><a class="font-mulish text-base m-2">How it works</a></li>
-            <li><a class="font-mulish text-base m-2">Our mission</a></li>
-            <li><a class="font-mulish text-base m-2">Who we are</a></li>
             <li>
-              <a class="font-mulish text-base m-2 md:hidden"
+              <a href="#how" class="font-mulish text-base m-2"
+                >Wie es funktioniert</a
+              >
+            </li>
+            <li>
+              <a href="#mission" class="font-mulish text-base m-2"
+                >Unsere Mission</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="font-mulish text-base m-2">Über uns</a>
+            </li>
+            <li>
+              <a href="#newsletter" class="font-mulish text-base m-2 md:hidden"
                 >Join the community</a
               >
             </li>
           </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">wearnize</a>
+        <a
+          href="#hero"
+          class="p-4 font-bold bg-transparent normal-case text-xl hover:text-primary"
+          >wearnize</a
+        >
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a class="font-mulish text-base m-2">How it works</a></li>
-          <li><a class="font-mulish text-base m-2">Our mission</a></li>
-          <li><a class="font-mulish text-base m-2">Who we are</a></li>
+          <li>
+            <a href="#how" class="font-mulish text-base">Wie es funktioniert</a>
+          </li>
+          <li>
+            <a href="#mission" class="font-mulish text-base">Unsere Mission</a>
+          </li>
+          <li><a href="#about" class="font-mulish text-base">Über uns</a></li>
         </ul>
       </div>
       <div class="navbar-end hidden md:flex">
-        <button
+        <a
+          href="#newsletter"
           class="px-6 py-3 rounded-2xl bg-primary text-white text-base font-mulish hover:bg-accent"
         >
-          Join the community
-        </button>
+          SEI DABEI!
+        </a>
       </div>
     </div>
   </div>

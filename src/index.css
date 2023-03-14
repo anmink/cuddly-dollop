@@ -5,3 +5,18 @@
 html {
   background-image: url('./assets/bg.jpg');
 }
+
+h1 {
+  font-size: 36px;
+  font-family: 'Newsreader', serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Newsreader', serif;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Mulish', sans-serif;
+}
